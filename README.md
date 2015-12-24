@@ -17,15 +17,19 @@ Windowsであれば、Docker Toolboxで構いません。
 
 ## 3.構築手順
 
+dockerコマンドが有効な場合
+
+
 ```
- curl -fsSL https://github.com/hidetarou2013/ConstructionRedmineServer/create_start_redmine.sh| sh
+ curl -fsSL https://github.com/hidetarou2013/ConstructionRedmineServer/raw/master/create_start_redmine.sh | sh
 ```
 
 
-もしくは、sudo dockerの場合のスクリプトも一応添付します。
+もしくは、「sudo docker」の場合のスクリプトも一応添付します。
+
 
 ```
- curl -fsSL https://github.com/hidetarou2013/ConstructionRedmineServer/sudo_create_start_redmine.sh| sh
+ curl -fsSL https://github.com/hidetarou2013/ConstructionRedmineServer/raw/master/sudo_create_start_redmine.sh | sh
 ```
 
 ##4. Redmine URL
