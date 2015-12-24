@@ -31,6 +31,7 @@ Windowsであれば、Docker Toolboxで構いません。
 ##4. Redmine URL
 
 http://<Docker Host IP Address>:10080/
+
 admin/admin
 
 
