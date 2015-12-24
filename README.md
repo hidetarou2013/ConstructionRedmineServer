@@ -34,7 +34,7 @@ dockerコマンドが有効な場合
 
 ##4. Redmine URL
 
-http://<Docker Host IP Address>:10080/
+http://DockerHostIPAddress:10080/
 
 admin/admin
 
