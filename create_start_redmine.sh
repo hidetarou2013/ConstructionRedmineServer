@@ -15,5 +15,10 @@ docker pull sameersbn/mysql:latest
 docker create --name redmine-storage hidetarou2013/redmine-storage
 docker create --name mysql-storage hidetarou2013/mysql-storage
 docker run --volumes-from mysql-storage --name=myredmine1_mysql -d -e 'DB_NAME=redmine_production'  -e 'DB_USER=redmine' -e 'DB_PASS=password' sameersbn/mysql:latest
+
+# svn
+docker run --name myredmine1_svn -t -d -v /home/vagrant/web-contents/:/var/www/html/ -p 80:80 -p 443:443 hidetarou2013/centos6-apache:SVN
+
 #docker run --name=redmine -it --rm -p 10080:80 --link myredmine1_mysql:mysql --volumes-from redmine-storage sameersbn/redmine
-docker run --name=redmine -d -t -p 10080:80 --link myredmine1_mysql:mysql --volumes-from redmine-storage sameersbn/redmine
+#docker run --name=redmine -d -t -p 10080:80 --link myredmine1_mysql:mysql --volumes-from redmine-storage sameersbn/redmine
+docker run --name=redmine -d -t -p 10080:80 --link myredmine1_mysql:mysql --link myredmine1_svn:svn --volumes-from redmine-storage sameersbn/redmine
