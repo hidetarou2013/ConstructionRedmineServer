@@ -38,5 +38,28 @@ http://DockerHostIPAddress:10080/
 
 admin/admin
 
+##5. 改変内容
+
+TAG:SVN
+・Subversion連携機能追加
+　決め打ちで、tmp1というリポジトリを作成してあります。
+　アクセスアカウントは１８名分のチームのダミーアカウントをアクセス用に設定済みです。
+　パスワードファイルは、「/etc/httpd/conf/tmp1」になります。必要があれば適時修正してください。
+　リポジトリの実際のファイルパスは、「/var/lib/svnrepos/tmp1」になります。
+　redmineから設定する際のリポジトリのURLは、「http://svn/repo1/」になります。
+　redmineから設定する際のリポジトリへの接続アカウントは、「id/pass=redmine/redadmin」になります。
+
+
+TAG:SVN_repo1
+・Subversion連携機能修正
+・リポジトリを外部設定可能にしました。
+　このTAGの例では「repo1」という名前のSVNリポジトリを新規作成し、アカウントのデフォルト設定済の状態までイメージに固められます。
+　
+任意のリポジトリ名に変更したい場合は
+・依存しているcentos6-apacheのDockerfileの、該当箇所「repo1」を利用したいリポジトリ名に置換し。
+・centos6-apacheのイメージをbuildする。（名前を決めておく：例　hidetarou2013/centos6-apache:SVN_repo1）
+・このプロジェクトのファイル「create_start_redmine.sh」の該当部分「hidetarou2013/centos6-apache:SVN_repo1」を修正し
+・シェルスクリプトをキックすれば起動できます。
+
 
 
