@@ -8,7 +8,7 @@ redmine:
   links: 
     - svn
     - mysql
-    - memcached
+
 
 svn:
   image: hidetarou2013/centos6-apache:SVN_repo1
