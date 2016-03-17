@@ -13,11 +13,8 @@ redmine:
 svn: 
   image: hidetarou2013/centos6-apache:SVN_repo1
   hostname: svn
-  expose: 
+  ports: 
     - "80" 
-  volumes: 
-    - /home/vagrant/web-contents/:/var/www/html/
-  command: etc/init.d/httpd start && /etc/rc.d/init.d/svnserve restart
   
 redmine-storage:
  image: hidetarou2013/redmine-storage
