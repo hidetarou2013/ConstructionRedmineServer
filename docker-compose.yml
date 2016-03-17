@@ -8,7 +8,7 @@ redmine:
   links: 
     - svn
     - mysql
-
+    - memcached
 
 svn:
   image: hidetarou2013/centos6-apache:SVN_repo1
@@ -26,9 +26,9 @@ mysql:
   image: sameersbn/mysql:latest
   hostname: mysql
   environment: 
-    - MYSQL_DB_USER=redmine
-    - MYSQL_DB_PASS=password
-    - MYSQL_DB_NAME=redmine_production
+    - DB_USER=redmine
+    - DB_PASS=password
+    - DB_NAME=redmine_production
   ports: 
     - "3306:3306" 
   volumes_from: 
