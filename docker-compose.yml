@@ -18,7 +18,7 @@ svn:
     - "443:443" 
   volumes: 
     - /home/vagrant/web-contents/:/var/www/html/
-  command: etc/init.d/httpd start && /etc/rc.d/init.d/svnserve restart && /bin/bash
+  command: etc/init.d/httpd start && /etc/rc.d/init.d/svnserve restart
   
 redmine-storage:
  image: hidetarou2013/redmine-storage
