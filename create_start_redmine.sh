@@ -26,3 +26,8 @@ docker run --volumes-from svn-storage --name myredmine1_svn -t -d -v /home/vagra
 #docker run --name=redmine -it --rm -p 10080:80 --link myredmine1_mysql:mysql --volumes-from redmine-storage sameersbn/redmine
 #docker run --name=redmine -d -t -p 10080:80 --link myredmine1_mysql:mysql --volumes-from redmine-storage sameersbn/redmine
 docker run --name=redmine -d -t -p 10080:80 --link myredmine1_mysql:mysql --link myredmine1_svn:svn --volumes-from redmine-storage sameersbn/redmine
+
+# status check
+docker ps -a
+
+exit 0
