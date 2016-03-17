@@ -1,0 +1,45 @@
+redmine: 
+  image: sameersbn/redmine
+  hostname: redmine
+  environment: 
+    - DOCKER_HOST=192.168.33.11
+  ports: 
+    - "10080:80" 
+  volumes: 
+    - /tmp3/workspace/laravel:/webapp
+  volumes_from: 
+    - redmine-storage
+  links: 
+    - svn
+    - mysql
+    - memcached
+
+svn:
+  image: hidetarou2013/centos6-apache:SVN_repo1
+  hostname: svn
+  ports: 
+    - "80:80" 
+    - "443:443" 
+  volumes: 
+    - /home/vagrant/web-contents/:/var/www/html/
+  
+redmine-storage:
+ image: hidetarou2013/redmine-storage
+ 
+mysql: 
+  image: sameersbn/mysql:latest
+  hostname: mysql
+  environment: 
+    - MYSQL_DB_USER=redmine
+    - MYSQL_DB_PASS=password
+    - MYSQL_DB_NAME=redmine_production
+  ports: 
+    - "3306:3306" 
+  volumes_from: 
+    - mysql-storage
+
+mysql-storage:
+ image: hidetarou2013/mysql-storage
+
+memcached:
+ image: memcached
