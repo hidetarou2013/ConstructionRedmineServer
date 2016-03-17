@@ -6,10 +6,10 @@ redmine:
   volumes_from: 
     - redmine-storage
   links: 
-    - svn
     - mysql
     - memcached
-
+    - svn
+    
 svn:
   image: hidetarou2013/centos6-apache:SVN_repo1
   hostname: svn
