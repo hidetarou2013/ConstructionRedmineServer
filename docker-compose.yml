@@ -8,7 +8,6 @@ redmine:
   links: 
     - mysql
     - memcached
-  external_links: 
     - svn
     
 svn:
