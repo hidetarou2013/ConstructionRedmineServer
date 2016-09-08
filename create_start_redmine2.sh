@@ -38,12 +38,12 @@ docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --l
 
 # retry
 # sleep
-sleep 10s
-docker stop myredmine2
-sleep 10s
-docker rm myredmine2
-sleep 10s
-docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage hidetarou2013/redmine:v3.3.0_a
+##sleep 10s
+##docker stop myredmine2
+##sleep 10s
+##docker rm myredmine2
+##sleep 10s
+##docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage hidetarou2013/redmine:v3.3.0_a
 
 # status check
 docker ps -a
