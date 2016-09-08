@@ -30,12 +30,15 @@ docker run --volumes-from myredmine2_mysql_storage --name=myredmine2_mysql -d -e
 # svn
 docker run --name myredmine2_svn -t -d -v /home/vagrant/web-contents/:/var/www/html/ -p 80:80 -p 443:443 hidetarou2013/centos6-apache:SVN_repo1
 
+# sleep
+sleep 1m
+
 # redmine
-docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage sameersbn/redmine
+##docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage sameersbn/redmine
 
 # retry
-docker stop myredmine2
-docker rm myredmine2
+##docker stop myredmine2
+##docker rm myredmine2
 docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage hidetarou2013/redmine:v3.3.0_a
 
 # status check
