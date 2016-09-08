@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # pre operate
-docker stop myredmine2_svn myredmine2_mysql myredmine2_mysql_storage myredmine2_redmine_storage
-docker rm myredmine2_svn myredmine2_mysql myredmine2_mysql_storage myredmine2_redmine_storage
+docker stop myredmine2_mysql_storage myredmine2_redmine_storage myredmine2_mysql myredmine2_svn myredmine2
+docker rm myredmine2_mysql_storage myredmine2_redmine_storage myredmine2_mysql myredmine2_svn myredmine2
 
 # pull method
 ##docker pull hidetarou2013/redmine-storage:latest 

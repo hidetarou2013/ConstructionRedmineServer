@@ -7,5 +7,7 @@ docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --l
 
 # status check
 docker ps -a
+sleep 2s
+docker ps
 
 exit 0
