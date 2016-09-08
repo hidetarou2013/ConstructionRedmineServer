@@ -5,7 +5,7 @@ docker pull hidetarou2013/redmine-storage:latest
 docker pull hidetarou2013/mysql-storage:latest 
 #docker pull hidetarou2013/svn-storage:latest 
 #docker pull sameersbn/redmine:latest 
-docker pull hidetarou2013/redmine:v3.3.0 
+docker pull hidetarou2013/redmine:v3.3.0_a 
 docker pull sameersbn/mysql:latest
 
 # build method
@@ -14,7 +14,6 @@ docker pull sameersbn/mysql:latest
 #docker build -t hidetarou2013/mysql-storage github.com/hidetarou2013/mysql-storage
 #docker build -t hidetarou2013/redmine-storage github.com/hidetarou2013/redmine-storage
 #docker build -t hidetarou2013/svn-storage github.com/hidetarou2013/svn-storage
-docker build -t hidetarou2013/redmine:v3.3.0_a github.com/hidetarou2013/ConstructionRedmineServer
 
 docker create --name redmine-storage hidetarou2013/redmine-storage
 docker create --name mysql-storage hidetarou2013/mysql-storage
