@@ -5,12 +5,12 @@ docker stop myredmine2_svn myredmine2_mysql myredmine2_mysql_storage myredmine2_
 docker rm myredmine2_svn myredmine2_mysql myredmine2_mysql_storage myredmine2_redmine_storage
 
 # pull method
-docker pull hidetarou2013/redmine-storage:latest 
-docker pull hidetarou2013/mysql-storage:latest 
+##docker pull hidetarou2013/redmine-storage:latest 
+##docker pull hidetarou2013/mysql-storage:latest 
 #docker pull hidetarou2013/svn-storage:latest 
-docker pull sameersbn/redmine:latest 
+##docker pull sameersbn/redmine:latest 
 #docker pull hidetarou2013/redmine:v3.3.0 
-docker pull sameersbn/mysql:latest
+##docker pull sameersbn/mysql:latest
 
 # build method
 #docker build -t sameersbn/mysql github.com/sameersbn/docker-mysql
@@ -38,12 +38,16 @@ docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --l
 
 # retry
 # sleep
-sleep 30s
+sleep 10s
 docker stop myredmine2
+sleep 10s
 docker rm myredmine2
+sleep 10s
 docker run --name=myredmine2 -d -t -p 10080:80 --link myredmine2_mysql:mysql --link myredmine2_svn:svn --volumes-from myredmine2_redmine_storage hidetarou2013/redmine:v3.3.0_a
 
 # status check
 docker ps -a
+sleep 1s
+docker ps
 
 exit 0
