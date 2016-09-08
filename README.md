@@ -69,7 +69,7 @@ TAG:SVN_repo1
 TAG:With_Themes
 
 + redmine の各種Themeを追加したヴァージョン
-+ この時点で、sameersbn/redmine ではなく、hidetarou2013/redmine:v3.3.0 のイメージを使用するように修正
++ この時点で、sameersbn/redmine ではなく、hidetarou2013/redmine:v3.3.0_a のイメージを使用するように修正
 + redmineのコンテナ名を redmine から myredmine1 に修正
 + 前のヴァージョンまでの起動シェルは「create_start_redmine_org.sh」に退避させている。
 
