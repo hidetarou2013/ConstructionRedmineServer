@@ -66,6 +66,13 @@ TAG:SVN_repo1
 + このプロジェクトのファイル「create_start_redmine.sh」の該当部分「hidetarou2013/centos6-apache:SVN_repo1」を修正し
 + シェルスクリプトをキックすれば起動できます。
 
+TAG:With_Themes
+
++ redmine の各種Themeを追加したヴァージョン
++ この時点で、sameersbn/redmine ではなく、hidetarou2013/redmine:v3.3.0 のイメージを使用するように修正
++ redmineのコンテナ名を redmine から myredmine1 に修正
++ 前のヴァージョンまでの起動シェルは「create_start_redmine_org.sh」に退避させている。
+
 ##6. 改良予定
 
 TAG:svn_storage_repo1
