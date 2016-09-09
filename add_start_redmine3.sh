@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # run shell
-# add_start_redmine3.sh myredmine3
+# sh add_start_redmine3.sh myredmine3
 
 #docker run --name=$1 -d -t -p 10080:80 --link $1_mysql:mysql --link $1_svn:svn --volumes-from $1_redmine_storage sameersbn/redmine
 docker stop $1
