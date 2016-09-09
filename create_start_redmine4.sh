@@ -24,7 +24,7 @@ docker rm $1_mysql_storage $1_redmine_storage $1_mysql $1_svn $1
 #docker build -t hidetarou2013/mysql-storage github.com/hidetarou2013/mysql-storage
 #docker build -t hidetarou2013/redmine-storage github.com/hidetarou2013/redmine-storage
 #docker build -t hidetarou2013/svn-storage github.com/hidetarou2013/svn-storage
-docker build -t hidetarou2013/redmine:$3 --file=github.com/hidetarou2013/ConstructionRedmineServer/master/Dockerfile_b
+docker build -t hidetarou2013/redmine:$3 github.com/hidetarou2013/ConstructionRedmineServer/master/v3.3.0_b/Dockerfile
 
 # storage
 docker create --name $1_redmine_storage hidetarou2013/redmine-storage

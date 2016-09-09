@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # run shell
-# sh add_start_redmine3.sh myredmine3 10080 v3.3.0_c
+# sh add_start_redmine4.sh myredmine3 10080 v3.3.0_c
 # param1:container name
 # param2:redmine port
 # param3:docker image tag
