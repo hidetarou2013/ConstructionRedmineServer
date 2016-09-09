@@ -2,7 +2,7 @@
 
 # run shell
 # sh create_start_redmine1.sh myredmine3 10080 v3.3.0_c
-# sh create_start_redmine1.sh myredmine3 10080 v2.6.10-8
+# sh create_start_redmine1.sh myredmine3 10080 2.6.10-8
 # param1:container name
 # param2:redmine port
 # param3:docker image tag
@@ -15,7 +15,7 @@ docker rm $1_mysql_storage $1_redmine_storage $1_mysql $1_svn $1
 ##docker pull hidetarou2013/redmine-storage:latest 
 ##docker pull hidetarou2013/mysql-storage:latest 
 #docker pull hidetarou2013/svn-storage:latest 
-docker pull sameersbn/redmine:2.6.10-8 
+docker pull sameersbn/redmine:$3 
 #docker pull hidetarou2013/redmine:v3.3.0_b 
 ##docker pull sameersbn/mysql:latest
 
