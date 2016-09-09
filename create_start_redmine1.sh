@@ -42,7 +42,7 @@ docker run --name $1_svn -t -d -v /home/vagrant/web-contents/:/var/www/html/ -p 
 sleep 30s
 
 # redmine
-docker run --name=$1 -d -t -p $2:80 --link $1_mysql:mysql --link $1_svn:svn --volumes-from $1_redmine_storage sameersbn/redmine:2.6.10-8
+docker run --name=$1 -d -t -p $2:80 --link $1_mysql:mysql --link $1_svn:svn --volumes-from $1_redmine_storage sameersbn/redmine:$3
 
 # retry
 # sleep
